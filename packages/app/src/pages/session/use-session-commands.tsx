@@ -35,6 +35,14 @@ const withCategory = (category: string) => {
   })
 }
 
+function isToolPart(part: Part): boolean {
+  return part.type === "tool"
+}
+
+function isReasoningPart(part: Part): boolean {
+  return part.type === "reasoning"
+}
+
 export const useSessionCommands = (actions: SessionCommandContext) => {
   const command = useCommand()
   const dialog = useDialog()
@@ -381,6 +389,83 @@ export const useSessionCommands = (actions: SessionCommandContext) => {
     })
   }
 
+  const removePartMutation = useMutation(() => ({
+    mutationFn: (input: { sessionID: string; messageID: string; partID: string }) =>
+      sdk().client.part.delete(input).then((result) => {
+        if (result.error) throw new Error("delete failed")
+        return result.data
+      }),
+    onMutate: (input) => {
+      const target = sync()
+      target.set(
+        produce((draft) => {
+          const list = draft.part[input.messageID]
+          if (!list) return
+          const result = Binary.search(list, input.partID, (p) => p.id)
+          if (result.found) list.splice(result.index, 1)
+          if (list.length === 0) delete draft.part[input.messageID]
+          delete draft.part_text_accum_delta[input.partID]
+        }),
+      )
+      return {}
+    },
+    onError: (err) => fail(err),
+  }))
+
+  const removePart = (input: { sessionID: string; messageID: string; partID: string }) => {
+    if (removePartMutation.isPending) return
+    void removePartMutation.mutateAsync(input)
+  }
+
+  const autoclean = async () => {
+    const sessionID = params.id
+    if (!sessionID) return
+
+    const targets: Array<{ messageID: string; partID: string }> = []
+    for (const message of messages()) {
+      const parts = sync().data.part[message.id] ?? []
+      for (const part of parts) {
+        if (isToolPart(part) || isReasoningPart(part))
+          targets.push({ messageID: message.id, partID: part.id })
+      }
+    }
+
+    if (targets.length === 0) {
+      showToast({
+        title: language.t("toast.session.autoclean.none.title"),
+        description: language.t("toast.session.autoclean.none.description"),
+      })
+      return
+    }
+
+    let succeeded = 0
+    for (const { messageID, partID } of targets) {
+      try {
+        await sdk().client.part.delete({ sessionID, messageID, partID })
+        succeeded++
+      } catch {
+        // Continue with the next part on individual failure
+      }
+    }
+
+    if (succeeded === 0) {
+      showToast({
+        title: language.t("toast.session.autoclean.failed.title"),
+        description: language.t("toast.session.autoclean.failed.description"),
+        variant: "error",
+      })
+      return
+    }
+
+    showToast({
+      title: language.t("toast.session.autoclean.success.title"),
+      description: language.t("toast.session.autoclean.success.description", {
+        count: String(succeeded),
+      }),
+      variant: "success",
+    })
+  }
+
   const fork = () => {
     void openDialog(
       () => import("@/components/dialog-fork"),
@@ -449,6 +534,14 @@ export const useSessionCommands = (actions: SessionCommandContext) => {
       slash: "compact",
       disabled: !params.id || visibleUserMessages().length === 0,
       onSelect: compact,
+    }),
+    sessionCommand({
+      id: "session.autoclean",
+      title: language.t("command.session.autoclean"),
+      description: language.t("command.session.autoclean.description"),
+      slash: "autoclean",
+      disabled: !params.id || visibleUserMessages().length === 0,
+      onSelect: autoclean,
     }),
     sessionCommand({
       id: "session.fork",

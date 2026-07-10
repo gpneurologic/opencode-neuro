@@ -85,6 +85,8 @@ export const dict = {
   "command.session.redo.description": "Повторить отменённое сообщение",
   "command.session.compact": "Сжать сессию",
   "command.session.compact.description": "Сократить сессию для уменьшения размера контекста",
+  "command.session.autoclean": "╨₧╤ç╨╕╤ü╤é╨╕╤é╤î ╨▓╤ï╨▓╨╛╨┤ ╨║╨╛╨╝╨░╨╜╨┤",
+  "command.session.autoclean.description": "╨ú╨┤╨░╨╗╨╕╤é╤î ╨▓╤ï╨▓╨╛╨┤ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╤ç╨║╨╕ ╨╕╨╖ ╨╕╤ü╤é╨╛╤Ç╨╕╨╕ ╤Ç╨░╨╖╨│╨╛╨▓╨╛╤Ç╨░",
   "command.session.fork": "Создать ответвление",
   "command.session.fork.description": "Создать новую сессию из сообщения",
   "command.session.share": "Поделиться сессией",
@@ -531,6 +533,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "Произошла ошибка при отмене публикации",
 
   "toast.session.listFailed.title": "Не удалось загрузить сессии для {{project}}",
+  "toast.session.autoclean.success.title": "╨É╨▓╤é╨╛╨╛╤ç╨╕╤ü╤é╨║╨░ ╨╖╨░╨▓╨╡╤Ç╤ê╨╡╨╜╨░",
+  "toast.session.autoclean.success.description": "╨ú╨┤╨░╨╗╨╡╨╜╨╛ {{count}} ╨▒╨╗╨╛╨║╨╛╨▓ ╨▓╤ï╨▓╨╛╨┤╨░ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╤ç╨║╨╕",
+  "toast.session.autoclean.none.title": "╨¥╨╡╤ç╨╡╨│╨╛ ╤ç╨╕╤ü╤é╨╕╤é╤î",
+  "toast.session.autoclean.none.description": "╨Æ ╤ì╤é╨╛╨╣ ╤ü╨╡╤ü╤ü╨╕╨╕ ╨╜╨╡ ╨╜╨░╨╣╨┤╨╡╨╜ ╨▓╤ï╨▓╨╛╨┤ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╤ç╨║╨╕",
+  "toast.session.autoclean.failed.title": "╨É╨▓╤é╨╛╨╛╤ç╨╕╤ü╤é╨║╨░ ╨╜╨╡ ╤â╨┤╨░╨╗╨░╤ü╤î",
+  "toast.session.autoclean.failed.description": "╨¥╨╡ ╤â╨┤╨░╨╗╨╛╤ü╤î ╤â╨┤╨░╨╗╨╕╤é╤î ╨▓╤ï╨▓╨╛╨┤ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╤ç╨║╨╕ ╨╕╨╖ ╤ì╤é╨╛╨╣ ╤ü╨╡╤ü╤ü╨╕╨╕",
 
   "toast.update.title": "Доступно обновление",
   "toast.update.description": "Новая версия OpenCode ({{version}}) доступна для установки.",

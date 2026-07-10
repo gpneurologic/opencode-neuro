@@ -1509,9 +1509,37 @@ PART_MAPPING["tool"] = function ToolPartDisplay(props) {
   const controlledOpen = () => (props.onToolOpenChange ? (props.toolOpen ?? props.defaultOpen) : undefined)
   const handleToolOpenChange = (open: boolean) => props.onToolOpenChange?.(open)
 
+  const handleToolRemove = () => {
+    const act = props.removePart
+    if (!act) return
+    const result = act({
+      sessionID: props.message.sessionID,
+      messageID: props.message.id,
+      partID: props.part.id,
+    })
+    if (result && typeof (result as Promise<void>).catch === "function") {
+      ;(result as Promise<void>).catch(() => {})
+    }
+  }
+
   return (
     <Show when={!hideQuestion()}>
       <div data-component="tool-part-wrapper" data-timeline-part-id={part().id}>
+        <Show when={props.removePart && part().state.status !== "running" && part().state.status !== "pending"}>
+          <div data-slot="tool-part-close">
+            <MessageActionButton
+              icon="close"
+              label={i18n.t("ui.message.removeMessage")}
+              useV2={props.useV2Actions}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={(event) => {
+                event.stopPropagation()
+                handleToolRemove()
+              }}
+              aria-label={i18n.t("ui.message.removeMessage")}
+            />
+          </div>
+        </Show>
         <Switch>
           <Match when={part().state.status === "error" && (part().state as any).error}>
             {(error) => {

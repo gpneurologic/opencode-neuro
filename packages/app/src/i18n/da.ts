@@ -85,6 +85,8 @@ export const dict = {
   "command.session.redo.description": "Omgør den sidste fortrudte besked",
   "command.session.compact": "Komprimér session",
   "command.session.compact.description": "Opsummer sessionen for at reducere kontekststørrelsen",
+  "command.session.autoclean": "Ryd op i kommandoutput",
+  "command.session.autoclean.description": "Fjern output fra shell-kommandoer fra samtalehistorikken",
   "command.session.fork": "Forgren fra besked",
   "command.session.fork.description": "Opret en ny session fra en tidligere besked",
   "command.session.share": "Del session",
@@ -529,6 +531,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "Der opstod en fejl under stop af sessionsdeling",
 
   "toast.session.listFailed.title": "Kunne ikke indlæse sessioner for {{project}}",
+  "toast.session.autoclean.success.title": "Automatisk oprydning gennemf├╕rt",
+  "toast.session.autoclean.success.description": "Fjernede {{count}} outputblokke fra shell-kommandoer",
+  "toast.session.autoclean.none.title": "Intet at rydde op",
+  "toast.session.autoclean.none.description": "Ingen shell-kommandooutput blev fundet i denne session",
+  "toast.session.autoclean.failed.title": "Automatisk oprydning mislykkedes",
+  "toast.session.autoclean.failed.description": "Kunne ikke fjerne shell-kommandooutput fra denne session",
 
   "toast.update.title": "Opdatering tilgængelig",
   "toast.update.description": "En ny version af OpenCode ({{version}}) er nu tilgængelig til installation.",

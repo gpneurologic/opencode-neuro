@@ -85,6 +85,8 @@ export const dict = {
   "command.session.redo.description": "Повторити останнє скасоване повідомлення",
   "command.session.compact": "Стиснути сесію",
   "command.session.compact.description": "Підсумувати сесію, щоб зменшити розмір контексту",
+  "command.session.autoclean": "╨₧╤ç╨╕╤ü╤é╨╕╤é╨╕ ╨▓╨╕╨▓╤û╨┤ ╨║╨╛╨╝╨░╨╜╨┤",
+  "command.session.autoclean.description": "╨Æ╨╕╨┤╨░╨╗╨╕╤é╨╕ ╨▓╨╕╨▓╤û╨┤ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╨╜╨║╨╕ ╨╖ ╤û╤ü╤é╨╛╤Ç╤û╤ù ╤Ç╨╛╨╖╨╝╨╛╨▓╨╕",
   "command.session.fork": "Відгалузити від повідомлення",
   "command.session.fork.description": "Створити нову сесію з попереднього повідомлення",
   "command.session.share": "Поділитися сесією",
@@ -545,6 +547,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "Під час припинення поширення сесії сталася помилка",
 
   "toast.session.listFailed.title": "Не вдалося завантажити сесії для {{project}}",
+  "toast.session.autoclean.success.title": "╨É╨▓╤é╨╛╨╛╤ç╨╕╤ë╨╡╨╜╨╜╤Å ╨╖╨░╨▓╨╡╤Ç╤ê╨╡╨╜╨╛",
+  "toast.session.autoclean.success.description": "╨Æ╨╕╨┤╨░╨╗╨╡╨╜╨╛ {{count}} ╨▒╨╗╨╛╨║╤û╨▓ ╨▓╨╕╨▓╨╛╨┤╤â ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╨╜╨║╨╕",
+  "toast.session.autoclean.none.title": "╨¥╤û╤ç╨╛╨│╨╛ ╨╛╤ç╨╕╤ë╨░╤é╨╕",
+  "toast.session.autoclean.none.description": "╨ú ╤å╤û╨╣ ╤ü╨╡╤ü╤û╤ù ╨╜╨╡ ╨╖╨╜╨░╨╣╨┤╨╡╨╜╨╛ ╨▓╨╕╨▓╨╛╨┤╤â ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╨╜╨║╨╕",
+  "toast.session.autoclean.failed.title": "╨¥╨╡ ╨▓╨┤╨░╨╗╨╛╤ü╤Å ╨▓╨╕╨║╨╛╨╜╨░╤é╨╕ ╨░╨▓╤é╨╛╨╛╤ç╨╕╤ë╨╡╨╜╨╜╤Å",
+  "toast.session.autoclean.failed.description": "╨¥╨╡ ╨▓╨┤╨░╨╗╨╛╤ü╤Å ╨▓╨╕╨┤╨░╨╗╨╕╤é╨╕ ╨▓╨╕╨▓╤û╨┤ ╨║╨╛╨╝╨░╨╜╨┤ ╨╛╨▒╨╛╨╗╨╛╨╜╨║╨╕ ╨╖ ╤å╤û╤ö╤ù ╤ü╨╡╤ü╤û╤ù",
   "toast.project.reloadFailed.title": "Не вдалося перезавантажити {{project}}",
 
   "toast.update.title": "Доступне оновлення",

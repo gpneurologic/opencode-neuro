@@ -89,6 +89,8 @@ export const dict = {
   "command.session.redo.description": "重做上一則復原的訊息",
   "command.session.compact": "精簡工作階段",
   "command.session.compact.description": "總結工作階段以減少上下文大小",
+  "command.session.autoclean": "µ╕àτÉåσæ╜Σ╗ñΦ╝╕σç║",
+  "command.session.autoclean.description": "σ╛₧σ░ìΦ⌐▒Φ¿ÿΘîäΣ╕¡τº╗ΘÖñ shell µîçΣ╗ñΦ╝╕σç║",
   "command.session.fork": "從訊息分支",
   "command.session.fork.description": "從先前的訊息建立新工作階段",
   "command.session.share": "分享工作階段",
@@ -526,6 +528,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "取消分享工作階段時發生錯誤",
 
   "toast.session.listFailed.title": "無法載入 {{project}} 的工作階段",
+  "toast.session.autoclean.success.title": "Φç¬σïòµ╕àτÉåσ«îµêÉ",
+  "toast.session.autoclean.success.description": "σ╖▓τº╗ΘÖñ {{count}} σÇï shell µîçΣ╗ñΦ╝╕σç║σìÇσíè",
+  "toast.session.autoclean.none.title": "µ▓Æµ£ëσÅ»µ╕àτÉåτÜäσàºσ«╣",
+  "toast.session.autoclean.none.description": "µ¡ñσ╖ÑΣ╜£ΘÜÄµ«╡Σ╕¡µë╛Σ╕ìσê░ shell µîçΣ╗ñΦ╝╕σç║",
+  "toast.session.autoclean.failed.title": "Φç¬σïòµ╕àτÉåσñ▒µòù",
+  "toast.session.autoclean.failed.description": "τäíµ│òσ╛₧µ¡ñσ╖ÑΣ╜£ΘÜÄµ«╡τº╗ΘÖñ shell µîçΣ╗ñΦ╝╕σç║",
 
   "toast.update.title": "有可用更新",
   "toast.update.description": "OpenCode 有新版本 ({{version}}) 可安裝。",

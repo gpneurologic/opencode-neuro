@@ -85,6 +85,9 @@ export const dict = {
   "command.session.redo.description": "Redo the last undone message",
   "command.session.compact": "Compact session",
   "command.session.compact.description": "Summarize the session to reduce context size",
+  "command.session.autoclean": "Autoclean output and thinking",
+  "command.session.autoclean.description":
+    "Remove tool output and thinking blocks from the conversation history",
   "command.session.fork": "Fork from message",
   "command.session.fork.description": "Create a new session from a previous message",
   "command.session.share": "Share session",
@@ -543,6 +546,15 @@ export const dict = {
 
   "toast.session.listFailed.title": "Failed to load sessions for {{project}}",
   "toast.project.reloadFailed.title": "Failed to reload {{project}}",
+
+  "toast.session.autoclean.success.title": "Autoclean complete",
+  "toast.session.autoclean.success.description": "Removed {{count}} cleanable block",
+  "toast.session.autoclean.none.title": "Nothing to clean",
+  "toast.session.autoclean.none.description":
+    "No tool output or thinking blocks were found in this session",
+  "toast.session.autoclean.failed.title": "Autoclean failed",
+  "toast.session.autoclean.failed.description":
+    "Could not remove tool output or thinking blocks from this session",
 
   "toast.update.title": "Update available",
   "toast.update.description": "A new version of OpenCode ({{version}}) is now available to install.",

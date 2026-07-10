@@ -703,6 +703,24 @@
 
 [data-component="tool-part-wrapper"] {
   width: 100%;
+  position: relative;
+
+  [data-slot="tool-part-close"] {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    will-change: opacity;
+  }
+
+  &:hover [data-slot="tool-part-close"],
+  &:focus-within [data-slot="tool-part-close"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 [data-component="dock-prompt"][data-kind="permission"] {

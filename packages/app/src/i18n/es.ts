@@ -85,6 +85,8 @@ export const dict = {
   "command.session.redo.description": "Rehacer el último mensaje deshecho",
   "command.session.compact": "Compactar sesión",
   "command.session.compact.description": "Resumir la sesión para reducir el tamaño del contexto",
+  "command.session.autoclean": "Limpiar salida de comandos",
+  "command.session.autoclean.description": "Eliminar la salida de comandos del shell del historial de la conversaci├│n",
   "command.session.fork": "Bifurcar desde mensaje",
   "command.session.fork.description": "Crear una nueva sesión desde un mensaje anterior",
   "command.session.share": "Compartir sesión",
@@ -532,6 +534,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "Ocurrió un error al dejar de compartir la sesión",
 
   "toast.session.listFailed.title": "Fallo al cargar sesiones para {{project}}",
+  "toast.session.autoclean.success.title": "Limpieza autom├ítica completada",
+  "toast.session.autoclean.success.description": "Se eliminaron {{count}} bloques de salida de comandos del shell",
+  "toast.session.autoclean.none.title": "Nada que limpiar",
+  "toast.session.autoclean.none.description": "No se encontr├│ salida de comandos del shell en esta sesi├│n",
+  "toast.session.autoclean.failed.title": "Fall├│ la limpieza autom├ítica",
+  "toast.session.autoclean.failed.description": "No se pudo eliminar la salida de comandos del shell de esta sesi├│n",
 
   "toast.update.title": "Actualización disponible",
   "toast.update.description": "Una nueva versión de OpenCode ({{version}}) está disponible para instalar.",

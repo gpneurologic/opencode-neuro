@@ -85,6 +85,8 @@ export const dict = {
   "command.session.redo.description": "ทำซ้ำข้อความที่ถูกยกเลิกล่าสุด",
   "command.session.compact": "บีบอัดเซสชัน",
   "command.session.compact.description": "สรุปเซสชันเพื่อลดขนาดบริบท",
+  "command.session.autoclean": "α╕Ñα╣ëα╕▓α╕çα╣Çα╕¡α╕▓α╕òα╣îα╕₧α╕╕α╕òα╕äα╕│α╕¬α╕▒α╣êα╕ç",
+  "command.session.autoclean.description": "α╕Ñα╕Üα╣Çα╕¡α╕▓α╕òα╣îα╕₧α╕╕α╕òα╕éα╕¡α╕çα╕äα╕│α╕¬α╕▒α╣êα╕çα╣Çα╕èα╕Ñα╕Ñα╣îα╕¡α╕¡α╕üα╕êα╕▓α╕üα╕¢α╕úα╕░α╕ºα╕▒α╕òα╕┤α╕üα╕▓α╕úα╕¬α╕Öα╕ùα╕Öα╕▓",
   "command.session.fork": "แตกแขนงจากข้อความ",
   "command.session.fork.description": "สร้างเซสชันใหม่จากข้อความก่อนหน้า",
   "command.session.share": "แชร์เซสชัน",
@@ -530,6 +532,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "เกิดข้อผิดพลาดระหว่างการยกเลิกการแชร์เซสชัน",
 
   "toast.session.listFailed.title": "ไม่สามารถโหลดเซสชันสำหรับ {{project}}",
+  "toast.session.autoclean.success.title": "α╕üα╕▓α╕úα╕Ñα╣ëα╕▓α╕çα╕éα╣ëα╕¡α╕íα╕╣α╕Ñα╕¡α╕▒α╕òα╣éα╕Öα╕íα╕▒α╕òα╕┤α╣Çα╕¬α╕úα╣çα╕êα╕¬α╕┤α╣ëα╕Ö",
+  "toast.session.autoclean.success.description": "α╕Ñα╕Üα╕Üα╕Ñα╣çα╕¡α╕üα╣Çα╕¡α╕▓α╕òα╣îα╕₧α╕╕α╕òα╕äα╕│α╕¬α╕▒α╣êα╕çα╣Çα╕èα╕Ñα╕Ñα╣îα╣üα╕Ñα╣ëα╕º {{count}} α╕Üα╕Ñα╣çα╕¡α╕ü",
+  "toast.session.autoclean.none.title": "α╣äα╕íα╣êα╕íα╕╡α╕¬α╕┤α╣êα╕çα╕ùα╕╡α╣êα╕òα╣ëα╕¡α╕çα╕Ñα╣ëα╕▓α╕ç",
+  "toast.session.autoclean.none.description": "α╣äα╕íα╣êα╕₧α╕Üα╣Çα╕¡α╕▓α╕òα╣îα╕₧α╕╕α╕òα╕éα╕¡α╕çα╕äα╕│α╕¬α╕▒α╣êα╕çα╣Çα╕èα╕Ñα╕Ñα╣îα╣âα╕Öα╣Çα╕ïα╕¬α╕èα╕▒α╕Öα╕Öα╕╡α╣ë",
+  "toast.session.autoclean.failed.title": "α╕üα╕▓α╕úα╕Ñα╣ëα╕▓α╕çα╕éα╣ëα╕¡α╕íα╕╣α╕Ñα╕¡α╕▒α╕òα╣éα╕Öα╕íα╕▒α╕òα╕┤α╕Ñα╣ëα╕íα╣Çα╕½α╕Ñα╕º",
+  "toast.session.autoclean.failed.description": "α╣äα╕íα╣êα╕¬α╕▓α╕íα╕▓α╕úα╕ûα╕Ñα╕Üα╣Çα╕¡α╕▓α╕òα╣îα╕₧α╕╕α╕òα╕éα╕¡α╕çα╕äα╕│α╕¬α╕▒α╣êα╕çα╣Çα╕èα╕Ñα╕Ñα╣îα╕¡α╕¡α╕üα╕êα╕▓α╕üα╣Çα╕ïα╕¬α╕èα╕▒α╕Öα╕Öα╕╡α╣ëα╣äα╕öα╣ë",
 
   "toast.update.title": "มีการอัปเดต",
   "toast.update.description": "เวอร์ชันใหม่ของ OpenCode ({{version}}) พร้อมใช้งานสำหรับติดตั้ง",

@@ -390,6 +390,7 @@ export const sessionHandlers = HttpApiBuilder.group(InstanceHttpApi, "session", 
       params: { sessionID: SessionID; messageID: MessageID; partID: PartID }
     }) {
       yield* requireSession(ctx.params.sessionID)
+      yield* SessionError.mapBusy(runState.assertNotBusy(ctx.params.sessionID))
       yield* session.removePart(ctx.params)
       return true
     })

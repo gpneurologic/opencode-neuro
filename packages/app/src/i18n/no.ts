@@ -84,6 +84,8 @@ export const dict = {
   "command.session.redo.description": "Gjør om siste angrede melding",
   "command.session.compact": "Komprimer sesjon",
   "command.session.compact.description": "Oppsummer sesjonen for å redusere kontekststørrelsen",
+  "command.session.autoclean": "Rydd kommandoutdata",
+  "command.session.autoclean.description": "Fjern utdata fra shell-kommandoer fra samtalehistorikken",
   "command.session.fork": "Forgren fra melding",
   "command.session.fork.description": "Opprett en ny sesjon fra en tidligere melding",
   "command.session.share": "Del sesjon",
@@ -451,6 +453,12 @@ export const dict = {
   "toast.session.unshare.failed.description": "Det oppstod en feil da delingen av sesjonen skulle stoppes",
 
   "toast.session.listFailed.title": "Kunne ikke laste sesjoner for {{project}}",
+  "toast.session.autoclean.success.title": "Automatisk opprydding fullf├╕rt",
+  "toast.session.autoclean.success.description": "Fjernet {{count}} utdatablokker fra shell-kommandoer",
+  "toast.session.autoclean.none.title": "Ingenting ├Ñ rydde",
+  "toast.session.autoclean.none.description": "Ingen utdata fra shell-kommandoer ble funnet i denne sesjonen",
+  "toast.session.autoclean.failed.title": "Automatisk opprydding mislyktes",
+  "toast.session.autoclean.failed.description": "Kunne ikke fjerne utdata fra shell-kommandoer fra denne sesjonen",
 
   "toast.update.title": "Oppdatering tilgjengelig",
   "toast.update.description": "En ny versjon av OpenCode ({{version}}) er nå tilgjengelig for installasjon.",
