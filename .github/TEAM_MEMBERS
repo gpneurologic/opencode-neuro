@@ -1,0 +1,5 @@
+# TEAM_MEMBERS - one GitHub username per line.
+# Used only by @opencode-ai/script for changelog/issue author filtering.
+# Local placeholder: this file is not tracked in this checkout but is
+# required at import time by packages/script/src/index.ts. Has no effect
+# on the compiled opencode binary. Add real usernames below if needed.

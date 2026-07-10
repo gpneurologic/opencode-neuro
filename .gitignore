@@ -32,3 +32,42 @@ UPCOMING_CHANGELOG.md
 logs/
 *.bun-build
 tsconfig.tsbuildinfo
+
+# Test/coverage outputs
+coverage/
+*.lcov
+.nyc_output
+junit-*.xml
+test-results/
+*.test-report
+
+# Local secrets and dumps
+*.log
+*.pid
+*.seed
+*.pid.lock
+pids/
+.pnp.*
+.pnp.js
+.yarn/cache
+
+# OS/editor clutter
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vs/
+.fleet/
+
+# Build/cache artifacts
+.cache/
+.parcel-cache
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+.rollup.cache
+.eslintcache
+
+# Local backups
+/packages/opencode/dist.bak
