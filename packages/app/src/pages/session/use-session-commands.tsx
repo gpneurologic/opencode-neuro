@@ -14,9 +14,13 @@ import { useSync } from "@/context/sync"
 import { useTerminal } from "@/context/terminal"
 import { showToast } from "@/utils/toast"
 import { findLast } from "@opencode-ai/core/util/array"
+import { Binary } from "@opencode-ai/core/util/binary"
 import { createSessionTabs } from "@/pages/session/helpers"
 import { extractPromptFromParts } from "@/utils/prompt"
 import { UserMessage } from "@opencode-ai/sdk/v2"
+import type { Part } from "@opencode-ai/sdk/v2/client"
+import { useMutation } from "@tanstack/solid-query"
+import { produce } from "solid-js/store"
 import { useSessionLayout } from "@/pages/session/session-layout"
 import { createSessionOwnership } from "./session-ownership"
 
@@ -37,6 +41,11 @@ const withCategory = (category: string) => {
 
 function isToolPart(part: Part): boolean {
   return part.type === "tool"
+}
+
+// TODO(stub): replace with project's real fail action (toast/notification/log handler)
+function fail(err: unknown): void {
+  console.error(err)
 }
 
 function isReasoningPart(part: Part): boolean {

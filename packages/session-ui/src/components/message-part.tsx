@@ -189,11 +189,12 @@ export interface MessagePartProps {
   showAssistantCopyPartID?: string | null
   turnDurationMs?: number
   useV2Actions?: boolean
+  removePart?: (args: { sessionID: string; messageID: string; partID: string }) => void | Promise<void>
 }
 
 function MessageActionButton(
   props: Pick<ComponentProps<"button">, "disabled" | "onMouseDown" | "onClick" | "aria-label"> & {
-    icon: "check" | "copy" | "reset"
+    icon: "check" | "copy" | "reset" | "close"
     label: JSX.Element
     useV2?: boolean
   },
