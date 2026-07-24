@@ -13,6 +13,7 @@ import { TaskTool } from "./task"
 import { Database } from "@opencode-ai/core/database/database"
 import { TodoWriteTool } from "./todo"
 import { UsageTool } from "./usage"
+import { SessionLogTool } from "./session-log"
 import { WebFetchTool } from "./webfetch"
 import { WriteTool } from "./write"
 import { InvalidTool } from "./invalid"
@@ -100,6 +101,7 @@ const layer = Layer.effect(
     const question = yield* QuestionTool
     const todo = yield* TodoWriteTool
     const usage = yield* UsageTool
+    const sessionlog = yield* SessionLogTool
     const lsptool = yield* LspTool
     const plan = yield* PlanExitTool
     const webfetch = yield* WebFetchTool
@@ -215,6 +217,7 @@ const layer = Layer.effect(
           fetch: Tool.init(webfetch),
           todo: Tool.init(todo),
           usage: Tool.init(usage),
+          sessionlog: Tool.init(sessionlog),
           search: Tool.init(websearch),
           skill: Tool.init(skilltool),
           patch: Tool.init(patchtool),
@@ -239,6 +242,7 @@ const layer = Layer.effect(
             tool.fetch,
             tool.todo,
             tool.usage,
+            tool.sessionlog,
             tool.search,
             tool.skill,
             tool.patch,

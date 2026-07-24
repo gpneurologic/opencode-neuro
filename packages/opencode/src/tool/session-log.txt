@@ -1,0 +1,20 @@
+Dumps a snapshot of the current session to a local file.
+
+The output file has two sections separated by a horizontal rule:
+  1. Header block with session metadata: session id/title, the model(s) in use,
+     aggregate tokens spent (input, output, reasoning, cache read, cache write),
+     context window usage with percentage of the model's limit, and total cost.
+  2. Message history: every user, assistant and tool turn in chronological order
+     with text content, reasoning, tool inputs and outputs, errors, and any
+     attached files referenced.
+
+Usage:
+  - Pass an absolute path for `filename`; relative paths resolve against the
+    current working directory.
+  - Choose `format: "markdown"` (default) for a human-readable file or
+    `format: "json"` for a machine-readable dump of every field.
+  - Overwrites the target file if it already exists.
+  - Large outputs may be truncated; the full log is written to the file either way.
+
+Call this when the user asks to save, archive, export or share the conversation,
+or when a subagent needs to hand off the full session state to another process.
