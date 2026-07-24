@@ -115,6 +115,40 @@ export function DialogMessage(props: {
             dialog.clear()
           },
         },
+        {
+          title: "Compact",
+          value: "session.compact",
+          description: "summarize this message",
+          onSelect: (dialog: { clear: () => void }) => {
+            // PLACEHOLDER: trigger session compaction up to this message.
+            // The server-side `session.summarize` endpoint does not
+            // currently accept a messageID; this fires session-wide
+            // compaction and should be narrowed once the API supports
+            // per-message scoping. See .notes/compact-menu-item.md.
+            void sdk.client.session.summarize({ sessionID: props.sessionID }).catch(() => {})
+            dialog.clear()
+          },
+        },
+        {
+          title: "Pin",
+          value: "session.pin",
+          description: "prevent message being automatically compacted",
+          onSelect: (dialog: { clear: () => void }) => {
+            // PLACEHOLDER: pin / unpin this message. See
+            // .notes/pin-menu-item.md.
+            dialog.clear()
+          },
+        },
+        {
+          title: "Archive",
+          value: "session.archive",
+          description: "replace message with summary and file reference",
+          onSelect: (dialog: { clear: () => void }) => {
+            // PLACEHOLDER: archive this message (or its session). See
+            // .notes/archive-menu-item.md.
+            dialog.clear()
+          },
+        },
       ]}
     />
   )

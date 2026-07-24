@@ -1,0 +1,3 @@
+Report the current session's token and cost usage. Returns the number of tokens in the active context window, what percentage of the model's context limit that represents, and the total US-dollar cost accrued by this session so far. These are the same figures shown in the OpenCode sidebar (tokens / % used / spent).
+
+Call this tool whenever the user asks about token usage, how full the context window is, how many tokens have been used, or how much the session has cost.
